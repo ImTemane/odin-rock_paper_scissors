@@ -17,3 +17,26 @@ function getHumanChoice() {
     getComputerChoice();
   };
 };
+
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === computerChoice) {
+    console.log("Tie (._.); " + humanChoice + " vs " + computerChoice + " = Tie.");
+  }
+  else if (humanChoice === "rock" && computerChoice === "scissors") {
+    console.log("You won! " + humanChoice + " beat " + computerChoice);
+  }
+  else if (humanChoice === "paper" && computerChoice === "rock") {
+    console.log("You won! " + humanChoice + " beat " + computerChoice);
+  }
+  else if (humanChoice === "scissors" && computerChoice === "paper") {
+    console.log("You won! " + humanChoice + " beat " + computerChoice);
+  }
+  else {
+    console.log("You lose. " + computerChoice + " beat " + humanChoice)
+  }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
