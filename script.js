@@ -1,5 +1,7 @@
 console.log("Hello World!");
 const attacks = ["rock","paper","scissors"];
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
   return attacks[Math.ceil(Math.random() * 3)]
