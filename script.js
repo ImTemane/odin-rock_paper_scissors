@@ -4,7 +4,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
-  return attacks[Math.ceil(Math.random() * 3)]
+  return attacks[Math.floor(Math.random() * 3)]
 };
 
 function getHumanChoice() {
