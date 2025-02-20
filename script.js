@@ -14,7 +14,7 @@ function getHumanChoice() {
   }
   else {
     console.log("Invalid Choice: check the spell pls.");
-    getComputerChoice();
+    getHumanChoice();
   };
 };
 
