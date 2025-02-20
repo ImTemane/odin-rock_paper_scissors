@@ -1,4 +1,4 @@
-console.log("Hello World!");
+console.log("Created by @ImTemane");
 const attacks = ["rock","paper","scissors"];
 let humanScore = 0;
 let computerScore = 0;
@@ -14,7 +14,7 @@ function getHumanChoice() {
   }
   else {
     console.log("Invalid Choice: check the spell pls.");
-    getHumanChoice();
+    return getHumanChoice();
   };
 };
 
@@ -40,7 +40,25 @@ function playRound(humanChoice, computerChoice) {
   }
 };
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame(){
 
-playRound(humanSelection, computerSelection);
+  while (humanScore < 5 && computerScore < 5){
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+    console.log("Score:  " + humanScore + " - " + computerScore);
+  }
+
+  if (humanScore === 5) {
+    console.log("§ YOU WON § 5 - " + computerScore)
+  }
+  else if (computerScore === 5){
+    console.log("y o u  l o s e | . _ . | " + humanScore + " - 5");
+  }
+  else {
+    console.log("H A C K E R")
+  }
+
+}
+
+playGame();
