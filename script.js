@@ -24,15 +24,19 @@ function playRound(humanChoice, computerChoice) {
   }
   else if (humanChoice === "rock" && computerChoice === "scissors") {
     console.log("You won! " + humanChoice + " beats " + computerChoice);
+    humanScore += 1;
   }
   else if (humanChoice === "paper" && computerChoice === "rock") {
     console.log("You won! " + humanChoice + " beats " + computerChoice);
+    humanScore += 1;
   }
   else if (humanChoice === "scissors" && computerChoice === "paper") {
     console.log("You won! " + humanChoice + " beats " + computerChoice);
+    humanScore += 1;
   }
   else {
-    console.log("You lose. " + computerChoice + " beats " + humanChoice)
+    console.log("You lose. " + computerChoice + " beats " + humanChoice);
+    computerScore += 1;
   }
 };
 
