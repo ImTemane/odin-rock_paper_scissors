@@ -9,7 +9,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   let choice = prompt("Choose your attack: rock, paper or scissors?  ").toLowerCase;
-  if (choice in attacks) {
+  if (attacks.includes(choice)) {
     return choice
   }
   else {
