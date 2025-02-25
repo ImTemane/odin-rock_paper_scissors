@@ -1,3 +1,4 @@
+/*
 console.log("Created by @ImTemane");
 const attacks = ["rock","paper","scissors"];
 let humanScore = 0;
@@ -62,3 +63,4 @@ function playGame(){
 }
 
 playGame();
+*/
