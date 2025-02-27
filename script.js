@@ -40,24 +40,3 @@ function playRound(humanChoice, computerChoice = getComputerChoice()) {
   }
   scoreDisplayer.textContent = "You: " + humanScore + " | Computer: " + computerScore;
 };
-
-/*function playGame(){
-
-  while (humanScore < 5 && computerScore < 5){
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log("Score:  " + humanScore + " - " + computerScore);
-  }
-
-  if (humanScore === 5) {
-    console.log("§ YOU WON § 5 - " + computerScore)
-  }
-  else if (computerScore === 5){
-    console.log("y o u  l o s e | . _ . | " + humanScore + " - 5");
-  }
-  else {
-    console.log("H A C K E R")
-  }
-
-}*/
