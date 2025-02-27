@@ -1,22 +1,17 @@
-/*
-console.log("Created by @ImTemane");
+const rockBtn = document.querySelector("button#rock");
+const paperBtn = document.querySelector("button#paper");
+const scissorsBtn = document.querySelector("button#scissors");
+
+const scoreDisplayer = document.querySelector("p.score");
+const roundWinnerDisplayer = document.querySelector("p.round-winner");
+const gameWinnerDisplayer = document.querySelector("p.game-winner");
+
 const attacks = ["rock","paper","scissors"];
 let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
   return attacks[Math.floor(Math.random() * 3)]
-};
-
-function getHumanChoice() {
-  let choice = prompt("Choose your attack: rock, paper or scissors?  ").toLowerCase();
-  if (attacks.includes(choice)) {
-    return choice
-  }
-  else {
-    console.log("Invalid Choice: check the spell pls.");
-    return getHumanChoice();
-  };
 };
 
 function playRound(humanChoice, computerChoice) {
@@ -61,6 +56,3 @@ function playGame(){
   }
 
 }
-
-playGame();
-*/
