@@ -16,24 +16,25 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
-    console.log("Tie (._.); " + humanChoice + " vs " + computerChoice + " = Tie.");
+    roundWinnerDisplayer.textContent = "Tie: " + humanChoice + " vs " + computerChoice
   }
   else if (humanChoice === "rock" && computerChoice === "scissors") {
-    console.log("You won! " + humanChoice + " beats " + computerChoice);
+    roundWinnerDisplayer.textContent = "You won! " + humanChoice + " beats " + computerChoice;
     humanScore += 1;
   }
   else if (humanChoice === "paper" && computerChoice === "rock") {
-    console.log("You won! " + humanChoice + " beats " + computerChoice);
+    roundWinnerDisplayer.textContent = "You won! " + humanChoice + " beats " + computerChoice;
     humanScore += 1;
   }
   else if (humanChoice === "scissors" && computerChoice === "paper") {
-    console.log("You won! " + humanChoice + " beats " + computerChoice);
+   roundWinnerDisplayer.textContent = "You won! " + humanChoice + " beats " + computerChoice;
     humanScore += 1;
   }
   else {
-    console.log("You lose. " + computerChoice + " beats " + humanChoice);
+    roundWinnerDisplayer.textContent = "You lose. " + computerChoice + " beats " + humanChoice;
     computerScore += 1;
   }
+  scoreDisplayer.textContent = "You: " + humanScore + " | Computer: " + computerScore;
 };
 
 function playGame(){
