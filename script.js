@@ -6,6 +6,10 @@ const scoreDisplayer = document.querySelector("p.score");
 const roundWinnerDisplayer = document.querySelector("p.round-winner");
 const gameWinnerDisplayer = document.querySelector("p.game-winner");
 
+rockBtn.addEventListener("click",() => playRound("rock"));
+paperBtn.addEventListener("click",() => playRound("paper"));
+scissorsBtn.addEventListener("click",() => playRound("scissors"));
+
 const attacks = ["rock","paper","scissors"];
 let humanScore = 0;
 let computerScore = 0;
@@ -14,7 +18,7 @@ function getComputerChoice() {
   return attacks[Math.floor(Math.random() * 3)]
 };
 
-function playRound(humanChoice, computerChoice) {
+function playRound(humanChoice, computerChoice = getComputerChoice()) {
   if (humanChoice === computerChoice) {
     roundWinnerDisplayer.textContent = "Tie: " + humanChoice + " vs " + computerChoice
   }
@@ -37,7 +41,7 @@ function playRound(humanChoice, computerChoice) {
   scoreDisplayer.textContent = "You: " + humanScore + " | Computer: " + computerScore;
 };
 
-function playGame(){
+/*function playGame(){
 
   while (humanScore < 5 && computerScore < 5){
     const humanSelection = getHumanChoice();
@@ -56,4 +60,4 @@ function playGame(){
     console.log("H A C K E R")
   }
 
-}
+}*/
