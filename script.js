@@ -50,7 +50,7 @@ function checkGameEnd() {
     rockBtn.removeEventListener("click", playRock);
     paperBtn.removeEventListener("click",playPaper);
     scissorsBtn.removeEventListener("click",playScissors);
-    gameWinnerDisplayer.textContent = humanScore = 5 ? "You won the game!" : "Computer won the game.";
+    gameWinnerDisplayer.textContent = humanScore === 5 ? "You won the game!" : "Computer won the game.";
     return true
   } else {
     return false
